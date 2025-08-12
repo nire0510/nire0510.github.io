@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1R | Software Development & Digital Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #00d1ff 0%, #7e4bff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .glow {
+            text-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+        }
+        
+        .border-glow {
+            box-shadow: 0 0 15px rgba(0, 209, 255, 0.3);
+        }
+        
+        .hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-4">
+    <div class="container mx-auto max-w-4xl border-glow border border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black p-8 md:p-12">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+            <!-- Logo & Main Content -->
+            <div class="flex-1 space-y-6">
+                <div class="flex items-center space-x-3">
+                    <div class="hexagon w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">N1R</span>
+                    </div>
+                    <h1 class="text-3xl font-bold gradient-text">N1R</h1>
+                </div>
+                
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                    Digital <span class="gradient-text glow">Solutions</span> <br>
+                    For The <span class="gradient-text glow">Future</span>
+                </h2>
+                
+                <p class="text-gray-400 text-lg max-w-md">
+                    Boutique software development and digital marketing services tailored to elevate your digital presence.
+                </p>
+                
+                <div class="flex space-x-4 pt-4">
+                    <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-medium hover:opacity-90 transition-all">
+                        Get Started
+                    </a>
+                    <a href="#services" class="px-6 py-3 border border-gray-700 rounded-full font-medium hover:bg-gray-800 transition-all">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Visual Element -->
+            <div class="hidden md:block relative">
+                <div class="w-64 h-64 rounded-full bg-gradient-to-br from-blue-900/30 to-purple-900/30 absolute -top-10 -right-10 blur-xl"></div>
+                <div class="relative z-10 w-56 h-56 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 flex items-center justify-center">
+                    <div class="grid grid-cols-2 gap-3 p-4">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-code text-blue-400"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-chart-line text-purple-400"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-green-400"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-bullseye text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer / Contact -->
+        <div id="contact" class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="space-y-2">
+                <h3 class="font-medium text-gray-400">Connect with us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-400 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center md:text-right">
+                <p class="text-gray-500">hello@n1r.digital</p>
+                <p class="text-gray-500">+1 (555) 123-4567</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simple animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('h1, h2, p, a, div');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
